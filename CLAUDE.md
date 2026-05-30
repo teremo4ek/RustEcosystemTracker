@@ -2,10 +2,6 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
-
-Rust Ecosystem Tracker — an automated knowledge-base builder for the Rust ecosystem. It fetches data from configurable RSS feeds, parses the content, and writes structured Markdown digests to disk.
-
 ## Commands
 
 ```bash
@@ -25,20 +21,6 @@ src/storage.rs       → groups FeedItems by pub_date, writes output/daily/YYYY-
 
 Processing pipeline: `config.toml → fetch_feed() → write_daily() → output/daily/`
 
-## Config Format
-
-`config.toml` uses TOML with `[[feeds]]` array:
-
-```toml
-[[feeds]]
-name = "This Week in Rust"
-url = "https://this-week-in-rust.org/rss.xml"
-```
-
-## Output
-
-`output/daily/` — one Markdown file per publication date, append mode. Files are gitignored (auto-generated).
-
 ## Key Dependencies
 
 - `tokio` — async runtime
@@ -50,8 +32,8 @@ url = "https://this-week-in-rust.org/rss.xml"
 
 ## Commit Convention
 
-Semantic, content-driven: `docs(async): add Tokio scheduler redesign article`, `crates(cache): add rust-cache v0.3`, `digest: add tokio scheduler, sqlx update and RFC 3812`.
+Semantic, content-driven: `docs(async): add ...`, `crates(cache): add ...`, `digest: add ...`.
 
 ## Language
 
-Code and commit messages in English. Knowledge base content (markdown output) in English. Project concept doc (`proj.txt`) is in Russian.
+Code and commit messages in English. Project concept doc (`proj.txt`) is in Russian.
