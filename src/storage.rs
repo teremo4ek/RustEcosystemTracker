@@ -1,4 +1,4 @@
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, HashSet};
 use std::fs;
 use std::io::Write;
 use std::path::Path;
@@ -17,6 +17,21 @@ fn parse_date(pub_date: &Option<String>) -> NaiveDate {
         .unwrap_or_else(|| chrono::Local::now().date_naive())
 }
 
+/// Read an existing daily digest file and collect all links already present.
+/// Returns an empty set if the file does not exist yet.
+fn collect_existing_links(path: &Path) -> HashSet<String> {
+    fs::read_to_string(path)
+        .unwrap_or_default()
+        .lines()
+        .filter_map(|line| {
+            let trimmed = line.trim();
+            trimmed
+                .strip_prefix("- **Link:** ")
+                .map(|url| url.to_string())
+        })
+        .collect()
+}
+
 pub fn write_daily(feed_name: &str, items: &[FeedItem]) -> anyhow::Result<()> {
     // Group items by publication date
     let mut grouped: BTreeMap<NaiveDate, Vec<&FeedItem>> = BTreeMap::new();
@@ -30,12 +45,26 @@ pub fn write_daily(feed_name: &str, items: &[FeedItem]) -> anyhow::Result<()> {
 
     for (date, date_items) in &grouped {
         let filename = output_dir.join(format!("{}.md", date));
+
+        // Collect links already written to this file and filter out duplicates
+        let existing_links = collect_existing_links(&filename);
+        let new_items: Vec<&FeedItem> = date_items
+            .iter()
+            .filter(|item| !existing_links.contains(&item.link))
+            .copied()
+            .collect();
+
+        // Skip entirely if all items are already present
+        if new_items.is_empty() {
+            continue;
+        }
+
         let mut file = fs::OpenOptions::new()
             .create(true)
             .append(true)
             .open(&filename)?;
 
-        write_section(&mut file, feed_name, date, date_items)?;
+        write_section(&mut file, feed_name, date, &new_items)?;
     }
 
     Ok(())
@@ -63,13 +92,7 @@ fn write_section(
             writeln!(file, "- **Published:** {}", pub_date)?;
         }
         if let Some(ref desc) = item.description {
-            // Truncate long descriptions to ~500 chars
-            let truncated = if desc.len() > 500 {
-                format!("{}...", &desc[..500])
-            } else {
-                desc.clone()
-            };
-            writeln!(file, "- **Description:** {}", truncated)?;
+            writeln!(file, "- **Description:** {}", desc)?;
         }
         writeln!(file)?;
     }
