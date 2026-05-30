@@ -5,6 +5,7 @@ use std::path::Path;
 
 use chrono::NaiveDate;
 
+use crate::config::LlmConfig;
 use crate::fetcher::FeedItem;
 
 /// Parse an RFC 2822 date string (typical RSS format) into a NaiveDate.
@@ -32,7 +33,11 @@ fn collect_existing_links(path: &Path) -> HashSet<String> {
         .collect()
 }
 
-pub fn write_daily(feed_name: &str, items: &[FeedItem]) -> anyhow::Result<()> {
+pub async fn write_daily(
+    feed_name: &str,
+    items: &[FeedItem],
+    llm_config: &LlmConfig,
+) -> anyhow::Result<()> {
     // Group items by publication date
     let mut grouped: BTreeMap<NaiveDate, Vec<&FeedItem>> = BTreeMap::new();
     for item in items {
@@ -64,17 +69,18 @@ pub fn write_daily(feed_name: &str, items: &[FeedItem]) -> anyhow::Result<()> {
             .append(true)
             .open(&filename)?;
 
-        write_section(&mut file, feed_name, date, &new_items)?;
+        write_section(&mut file, feed_name, date, &new_items, llm_config).await?;
     }
 
     Ok(())
 }
 
-fn write_section(
+async fn write_section(
     mut file: &fs::File,
     feed_name: &str,
     date: &NaiveDate,
     items: &[&FeedItem],
+    llm_config: &LlmConfig,
 ) -> anyhow::Result<()> {
     // Write header only if file is empty (new file)
     let metadata = file.metadata()?;
@@ -94,6 +100,24 @@ fn write_section(
         if let Some(ref desc) = item.description {
             writeln!(file, "- **Description:** {}", desc)?;
         }
+
+        // Generate LLM summary for this item
+        let summary_input = match &item.description {
+            Some(desc) => format!("{}\n\n{}", item.title, desc),
+            None => item.title.clone(),
+        };
+        match crate::llm::summarize(llm_config, &summary_input).await {
+            Ok(summary) if !summary.is_empty() => {
+                writeln!(file, "- **Summary:** {}", summary)?;
+            }
+            Ok(_) => {
+                print!("empty summary ");
+            }
+            Err(e) => {
+                eprintln!("  ⚠ LLM summary failed for '{}': {}", item.title, e);
+            }
+        }
+
         writeln!(file)?;
     }
 
