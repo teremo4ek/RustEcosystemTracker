@@ -2,14 +2,10 @@ use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
 pub struct Config {
-    pub feeds: Vec<FeedSource>,
+    pub feed_url: String,
+    #[serde(default = "default_feed_name")]
+    pub feed_name: String,
     pub llm: LlmConfig,
-}
-
-#[derive(Debug, Deserialize)]
-pub struct FeedSource {
-    pub name: String,
-    pub url: String,
 }
 
 #[derive(Debug, Deserialize)]
@@ -19,6 +15,10 @@ pub struct LlmConfig {
     pub model: String,
     #[serde(default = "default_max_tokens")]
     pub max_tokens: u32,
+}
+
+fn default_feed_name() -> String {
+    "Rust Blog".to_string()
 }
 
 fn default_max_tokens() -> u32 {

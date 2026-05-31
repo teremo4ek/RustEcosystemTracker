@@ -974,25 +974,14 @@ dependencies = [
 ]
 
 [[package]]
-name = "rss"
-version = "2.0.13"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d0e38781082c53bdde56e6081698c06831f69a27eac2593ed6b6cb2511424ad5"
-dependencies = [
- "atom_syndication",
- "derive_builder",
- "quick-xml",
-]
-
-[[package]]
 name = "rust-ecosystem-tracker"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "atom_syndication",
  "chrono",
  "dotenvy",
  "reqwest",
- "rss",
  "serde",
  "serde_json",
  "tokio",
