@@ -46,10 +46,7 @@ pub async fn fetch_feed(url: &str) -> anyhow::Result<FetchResult> {
                 .content()
                 .and_then(|c| c.value().map(|v| v.to_string()));
 
-            let author = entry
-                .authors()
-                .first()
-                .map(|a| a.name().to_string());
+            let author = entry.authors().first().map(|a| a.name().to_string());
 
             AtomEntry {
                 title: entry.title().to_string(),
