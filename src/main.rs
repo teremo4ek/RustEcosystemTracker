@@ -1,10 +1,7 @@
 mod config;
 mod fetcher;
 mod llm;
-mod state;
 mod storage;
-
-use std::path::Path;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
@@ -16,19 +13,20 @@ async fn main() -> anyhow::Result<()> {
     let result = fetcher::fetch_feed(&config.feed_url).await?;
     println!("  → {} entries fetched", result.entries.len());
 
-    let state_path = Path::new("output/.state.json");
-    let mut feed_state = state::FeedState::load(state_path)?;
+    let wrote = storage::write_entries(
+        &config.feed_name,
+        &result.entries,
+        &result.feed_updated,
+        &config.llm,
+        config.summarize,
+    )
+    .await?;
 
-    if !feed_state.has_changed(&result.feed_updated) {
+    if !wrote {
         println!("Feed unchanged. Nothing to do.");
-        return Ok(());
+    } else {
+        println!("Done.");
     }
 
-    storage::write_entries(&result.entries, &config.llm, config.summarize).await?;
-
-    feed_state.last_updated = Some(result.feed_updated.to_rfc3339());
-    feed_state.save(state_path)?;
-
-    println!("Done.");
     Ok(())
 }

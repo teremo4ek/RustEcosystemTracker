@@ -3,9 +3,15 @@ use serde::Deserialize;
 #[derive(Debug, Deserialize)]
 pub struct Config {
     pub feed_url: String,
+    #[serde(default = "default_feed_name")]
+    pub feed_name: String,
     pub llm: LlmConfig,
     #[serde(default)]
     pub summarize: bool,
+}
+
+fn default_feed_name() -> String {
+    "Feed".to_string()
 }
 
 #[derive(Debug, Deserialize)]

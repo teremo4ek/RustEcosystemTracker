@@ -6,22 +6,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 cargo build          # compile
-cargo run            # fetch Atom feed from config.toml and write output/daily/*.md
+cargo run            # fetch Atom feed from config.toml and write output/{feed_name}.md
 cargo test           # run tests (none yet)
 ```
 
 ## Architecture
 
 ```
-src/main.rs          → entry point: loads config, fetches feed, checks state, writes entries
+src/main.rs          → entry point: loads config, fetches feed, writes entries to single output file
 src/config.rs        → Config / LlmConfig structs, loads from config.toml via serde+toml
 src/fetcher.rs       → async HTTP fetch (reqwest) + Atom parsing (atom_syndication) → FetchResult
-src/state.rs         → FeedState: persists last <updated> in output/.state.json for change detection
-src/storage.rs       → writes one MD file per AtomEntry to output/daily/{date}-{slug}.md
+src/storage.rs       → writes/updates single MD file at output/{feed_slug}.md; deduplicates by link, appends new entries
 src/llm.rs           → OpenAI-compatible API call for summarization
 ```
 
-Processing pipeline: `config.toml → fetch_feed() → state check → write_entries() → save state`
+Processing pipeline: `config.toml → fetch_feed() → write_entries() (dedup + append)`
 
 ## Key Dependencies
 
