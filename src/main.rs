@@ -24,7 +24,7 @@ async fn main() -> anyhow::Result<()> {
         return Ok(());
     }
 
-    storage::write_entries(&result.entries, &config.llm).await?;
+    storage::write_entries(&result.entries, &config.llm, config.summarize).await?;
 
     feed_state.last_updated = Some(result.feed_updated.to_rfc3339());
     feed_state.save(state_path)?;
