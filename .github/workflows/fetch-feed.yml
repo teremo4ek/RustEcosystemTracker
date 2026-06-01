@@ -43,8 +43,8 @@ jobs:
 
       - name: Commit and push
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "teremo4ek"
+          git config user.email "teremo4ek@gmail.com"
           git add -f output/rust-blog.md
           git diff --cached --quiet && echo "No changes to commit" && exit 0
           git commit -m "update feed output"
