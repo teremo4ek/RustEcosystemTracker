@@ -11,16 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-
-      - name: Switch to feed-output branch
-        run: |
-          if git rev-parse --verify origin/feed-output >/dev/null 2>&1; then
-            git checkout feed-output
-          else
-            git checkout -b feed-output
-          fi
 
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
@@ -48,4 +38,4 @@ jobs:
           git add -f output/rust-blog.md
           git diff --cached --quiet && echo "No changes to commit" && exit 0
           git commit -m "update feed output"
-          git push -u origin feed-output
+          git push
