@@ -1,6 +1,6 @@
 # Rust Blog
 
-> Last updated: 2026-06-02T15:23:37+00:00
+> Last updated: 2026-05-02T15:23:37+00:00
 
 ---
 
@@ -13,7 +13,7 @@
 
 ## Summary
 
-*Summarization disabled.*
+_Summarization disabled._
 
 ---
 
@@ -26,7 +26,7 @@
 
 ## Summary
 
-*Summarization disabled.*
+_Summarization disabled._
 
 ---
 
@@ -39,7 +39,7 @@
 
 ## Summary
 
-*Summarization disabled.*
+_Summarization disabled._
 
 ---
 
@@ -52,7 +52,7 @@
 
 ## Summary
 
-*Summarization disabled.*
+_Summarization disabled._
 
 ---
 
@@ -65,7 +65,7 @@
 
 ## Summary
 
-*Summarization disabled.*
+_Summarization disabled._
 
 ---
 
@@ -78,7 +78,7 @@
 
 ## Summary
 
-*Summarization disabled.*
+_Summarization disabled._
 
 ---
 
@@ -91,7 +91,7 @@
 
 ## Summary
 
-*Summarization disabled.*
+_Summarization disabled._
 
 ---
 
@@ -104,7 +104,7 @@
 
 ## Summary
 
-*Summarization disabled.*
+_Summarization disabled._
 
 ---
 
@@ -117,7 +117,7 @@
 
 ## Summary
 
-*Summarization disabled.*
+_Summarization disabled._
 
 ---
 
@@ -130,7 +130,6 @@
 
 ## Summary
 
-*Summarization disabled.*
+_Summarization disabled._
 
 ---
-
