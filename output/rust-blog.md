@@ -1,8 +1,22 @@
 # Rust Blog
 
-> Last updated: 2026-06-11T14:20:46+00:00
+> Last updated: 2026-06-25T19:10:13+00:00
 
 ---
+
+## The many journeys of learning Rust
+
+- **Link:** https://blog.rust-lang.org/2026/06/25/vision-doc-journeys-to-learning-rust/
+- **Published:** 2026-06-25
+- **Updated:** 2026-06-25
+- **Author:** Pete LeVasseur
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 
 
