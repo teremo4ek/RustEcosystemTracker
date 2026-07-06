@@ -1,8 +1,9 @@
 # Rust Blog
 
-> Last updated: 2026-06-30T12:20:27+00:00
+> Last updated: 2026-07-06T10:19:22+00:00
 
 ---
+
 
 ## Announcing Rust 1.96.1
 
