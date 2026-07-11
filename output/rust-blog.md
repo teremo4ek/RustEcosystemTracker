@@ -1,8 +1,22 @@
 # Rust Blog
 
-> Last updated: 2026-07-06T10:19:22+00:00
+> Last updated: 2026-07-10T21:03:17+00:00
 
 ---
+
+## Announcing Rust 1.97.0
+
+- **Link:** https://blog.rust-lang.org/2026/07/09/Rust-1.97.0/
+- **Published:** 2026-07-09
+- **Updated:** 2026-07-09
+- **Author:** The Rust Release Team
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 
 ## Announcing Rust 1.96.1
