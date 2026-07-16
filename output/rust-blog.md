@@ -1,8 +1,22 @@
 # Rust Blog
 
-> Last updated: 2026-07-10T21:03:17+00:00
+> Last updated: 2026-07-16T08:09:19+00:00
 
 ---
+
+## crates.io: development update
+
+- **Link:** https://blog.rust-lang.org/2026/07/13/crates-io-development-update/
+- **Published:** 2026-07-13
+- **Updated:** 2026-07-13
+- **Author:** Tobias Bieniek
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 ## Announcing Rust 1.97.0
 
