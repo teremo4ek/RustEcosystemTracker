@@ -1,8 +1,22 @@
 # Rust Blog
 
-> Last updated: 2026-07-16T08:09:19+00:00
+> Last updated: 2026-07-17T18:38:18+00:00
 
 ---
+
+## Announcing Rust 1.97.1
+
+- **Link:** https://blog.rust-lang.org/2026/07/16/Rust-1.97.1/
+- **Published:** 2026-07-16
+- **Updated:** 2026-07-16
+- **Author:** The Rust Release Team
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 ## crates.io: development update
 
