@@ -1,8 +1,22 @@
 # Rust Blog
 
-> Last updated: 2026-07-31T07:14:17+00:00
+> Last updated: 2026-08-05T20:54:53+00:00
 
 ---
+
+## Enabling the next iteration of the borrow checker on nightly
+
+- **Link:** https://blog.rust-lang.org/2026/08/04/enabling-polonius-alpha-on-nightly/
+- **Published:** 2026-08-04
+- **Updated:** 2026-08-04
+- **Author:** Jack Huey
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 
 ## Announcing Rust 1.97.1
