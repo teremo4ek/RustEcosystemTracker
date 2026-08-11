@@ -1,8 +1,9 @@
 # Rust Blog
 
-> Last updated: 2026-08-05T20:54:53+00:00
+> Last updated: 2026-08-10T10:37:21+00:00
 
 ---
+
 
 ## Enabling the next iteration of the borrow checker on nightly
 
