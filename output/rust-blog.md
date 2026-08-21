@@ -1,8 +1,35 @@
 # Rust Blog
 
-> Last updated: 2026-08-10T10:37:21+00:00
+> Last updated: 2026-08-20T17:17:38+00:00
 
 ---
+
+## Supply chain attack on arrayref
+
+- **Link:** https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/
+- **Published:** 2026-08-20
+- **Updated:** 2026-08-20
+- **Author:** Manish Goregaokar
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
+## Announcing Rust 1.98.0
+
+- **Link:** https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/
+- **Published:** 2026-08-20
+- **Updated:** 2026-08-20
+- **Author:** The Rust Release Team
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 
 ## Enabling the next iteration of the borrow checker on nightly
