@@ -1,8 +1,22 @@
 # Rust Blog
 
-> Last updated: 2026-08-20T17:17:38+00:00
+> Last updated: 2026-08-23T04:46:00+00:00
 
 ---
+
+## Enabling the next-generation trait solver on nightly
+
+- **Link:** https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/
+- **Published:** 2026-08-21
+- **Updated:** 2026-08-21
+- **Author:** lcnr
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 ## Supply chain attack on arrayref
 
