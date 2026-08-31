@@ -1,8 +1,22 @@
 # Rust Blog
 
-> Last updated: 2026-08-23T04:46:00+00:00
+> Last updated: 2026-08-31T11:08:44+00:00
 
 ---
+
+## Announcing our first Maintainers in Residence
+
+- **Link:** https://blog.rust-lang.org/2026/08/26/announcing-our-first-maintainers-in-residence/
+- **Published:** 2026-08-26
+- **Updated:** 2026-08-26
+- **Author:** Lori Lorusso, Jakub Beránek
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 ## Enabling the next-generation trait solver on nightly
 
