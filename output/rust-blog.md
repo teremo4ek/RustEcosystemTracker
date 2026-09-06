@@ -1,8 +1,35 @@
 # Rust Blog
 
-> Last updated: 2026-08-31T11:08:44+00:00
+> Last updated: 2026-09-03T13:16:00+00:00
 
 ---
+
+## Announcing Rust 1.98.1
+
+- **Link:** https://blog.rust-lang.org/2026/09/03/Rust-1.98.1/
+- **Published:** 2026-09-03
+- **Updated:** 2026-09-03
+- **Author:** The Rust Release Team
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
+## Announcing rustup 1.29.1
+
+- **Link:** https://blog.rust-lang.org/2026/09/01/Rustup-1.29.1/
+- **Published:** 2026-09-01
+- **Updated:** 2026-09-01
+- **Author:** The Rustup Team
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 ## Announcing our first Maintainers in Residence
 
