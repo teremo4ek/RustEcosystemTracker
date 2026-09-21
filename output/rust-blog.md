@@ -1,8 +1,22 @@
 # Rust Blog
 
-> Last updated: 2026-09-08T15:46:39+00:00
+> Last updated: 2026-09-17T22:23:23+00:00
 
 ---
+
+## Be alert: targeted attacks on prominent Rustaceans
+
+- **Link:** https://blog.rust-lang.org/2026/09/17/targeted-attacks/
+- **Published:** 2026-09-17
+- **Updated:** 2026-09-17
+- **Author:** Adam Harvey
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 ## Rust debugging survey 2026 results
 
