@@ -1,8 +1,35 @@
 # Rust Blog
 
-> Last updated: 2026-09-17T22:23:23+00:00
+> Last updated: 2026-09-22T14:57:54+00:00
 
 ---
+
+## Announcing a Maintainer in Residence: Scott Schafer for the Cargo team
+
+- **Link:** https://blog.rust-lang.org/2026/09/22/announcing-a-maintainer-in-residence-scott-schafer-for-the-cargo-team/
+- **Published:** 2026-09-22
+- **Updated:** 2026-09-22
+- **Author:** Jakub Beránek
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
+## GitHub Actions leaking secrets when Miri output is cached
+
+- **Link:** https://blog.rust-lang.org/2026/09/21/github-actions-leaking-secrets-when-miri-output-is-cached/
+- **Published:** 2026-09-21
+- **Updated:** 2026-09-21
+- **Author:** Manish Goregaokar
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 ## Be alert: targeted attacks on prominent Rustaceans
 
