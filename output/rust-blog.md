@@ -1,8 +1,9 @@
 # Rust Blog
 
-> Last updated: 2026-09-22T14:57:54+00:00
+> Last updated: 2026-09-28T08:48:58+00:00
 
 ---
+
 
 ## Announcing a Maintainer in Residence: Scott Schafer for the Cargo team
 
