@@ -1,8 +1,35 @@
 # Rust Blog
 
-> Last updated: 2026-09-28T08:48:58+00:00
+> Last updated: 2026-10-02T11:31:16+00:00
 
 ---
+
+## Demoting i686 Windows targets to std-only
+
+- **Link:** https://blog.rust-lang.org/2026/10/02/demoting-i686-windows-targets-to-std-only/
+- **Published:** 2026-10-02
+- **Updated:** 2026-10-02
+- **Author:** Mateusz Mikuła, Ralf Jung
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
+## Announcing Rust 1.99.0
+
+- **Link:** https://blog.rust-lang.org/2026/10/01/Rust-1.99.0/
+- **Published:** 2026-10-01
+- **Updated:** 2026-10-01
+- **Author:** The Rust Release Team
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 
 ## Announcing a Maintainer in Residence: Scott Schafer for the Cargo team
