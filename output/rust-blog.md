@@ -1,8 +1,22 @@
 # Rust Blog
 
-> Last updated: 2026-10-02T11:31:16+00:00
+> Last updated: 2026-10-15T17:43:57+00:00
 
 ---
+
+## Announcing Rust 1.99.1
+
+- **Link:** https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/
+- **Published:** 2026-10-15
+- **Updated:** 2026-10-15
+- **Author:** The Rust Release Team
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 ## Demoting i686 Windows targets to std-only
 
