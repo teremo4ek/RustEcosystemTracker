@@ -1,8 +1,35 @@
 # Rust Blog
 
-> Last updated: 2026-10-21T08:54:51+00:00
+> Last updated: 2026-10-26T11:23:26+00:00
 
 ---
+
+## How to fund Rust contributors
+
+- **Link:** https://blog.rust-lang.org/2026/10/26/how-to-fund-rust-contributors/
+- **Published:** 2026-10-26
+- **Updated:** 2026-10-26
+- **Author:** Jakub Beránek
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
+## Announcing rustup 1.29.2
+
+- **Link:** https://blog.rust-lang.org/2026/10/20/Rustup-1.29.2/
+- **Published:** 2026-10-20
+- **Updated:** 2026-10-20
+- **Author:** The Rustup Team
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 
 ## Announcing Rust 1.99.1
