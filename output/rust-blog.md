@@ -1,8 +1,22 @@
 # Rust Blog
 
-> Last updated: 2026-11-01T06:22:56+00:00
+> Last updated: 2026-11-05T19:01:22+00:00
 
 ---
+
+## Announcing rustup 1.29.3
+
+- **Link:** https://blog.rust-lang.org/2026/11/03/Rustup-1.29.3/
+- **Published:** 2026-11-03
+- **Updated:** 2026-11-03
+- **Author:** The Rustup Team
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 
 
