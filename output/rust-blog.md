@@ -1,8 +1,35 @@
 # Rust Blog
 
-> Last updated: 2026-11-11T12:34:26+00:00
+> Last updated: 2026-11-16T14:39:23+00:00
 
 ---
+
+## Enabling the parallel frontend on nightly
+
+- **Link:** https://blog.rust-lang.org/2026/11/16/enabling-parallel-frontend-on-nightly/
+- **Published:** 2026-11-16
+- **Updated:** 2026-11-16
+- **Author:** Jakub Beránek
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
+## Announcing Rust 1.100.0
+
+- **Link:** https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/
+- **Published:** 2026-11-12
+- **Updated:** 2026-11-12
+- **Author:** The Rust Release Team
+
+## Summary
+
+*Summarization disabled.*
+
+---
+
 
 ## Google Summer of Code 2026 results
 
