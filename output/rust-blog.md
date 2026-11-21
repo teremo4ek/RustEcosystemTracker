@@ -1,8 +1,9 @@
 # Rust Blog
 
-> Last updated: 2026-11-16T14:39:23+00:00
+> Last updated: 2026-11-20T19:58:42+00:00
 
 ---
+
 
 ## Enabling the parallel frontend on nightly
 
